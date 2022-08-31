@@ -1,0 +1,20 @@
+Iterator- Correct
+Factory method-Correct
+Observer-Correct
+Chain of responsibility-Correct  
+Memento-wrong  //ainda não apliquei por isso não consegui fazer a ligação
+Adapter-Correct
+Bridge-Correct
+Command-wrong //ainda não apliquei por isso não consegui fazer a ligação
+Flyweight-correct
+Decorator-correct //Wrapee .doThis() foi fácil de perceber
+Singleton-Correct //getInstance() falei com o professor na aula
+Strategy-Correct 
+
+Interpreter-wrong //não foi mencionado nos slides
+
+
+
+count
+correct-10
+wrong-3

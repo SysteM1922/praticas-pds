@@ -1,0 +1,49 @@
+EX4 - Análise da implementação da classe java.util.Calendar
+
+when looking through the code you can see that the Java Calendar Class has two constructors 
+these being protected Calendar() and protected Calendar(TimeZone zone, Locale aLocale) being defined on line 937 
+and on line 949 respectively. 
+
+Because the constructors are "protected" this means that they cannot be accessed outside the class.
+
+Constructor definition:
+	-protected Calendar() -> Constructs a Calendar using the default system time zone and locale.
+	
+	start - line 937	
+	protected Calendar()
+    	{
+        	this(TimeZone.getDefaultRef(), Locale.getDefault(Locale.Category.FORMAT));
+        	sharedZone = true;
+    	}
+
+
+
+	-protected Calendar(TimeZone zone, Locale aLocale) -> Constructs a Calendar using a specified time zone and locale
+	
+	start - line 949
+ 	protected Calendar(TimeZone zone, Locale aLocale)
+    	{
+        	fields = new int[FIELD_COUNT];
+        	isSet = new boolean[FIELD_COUNT];
+        	stamp = new int[FIELD_COUNT];
+
+	        this.zone = zone;
+        	setWeekCountData(aLocale);
+    	}
+
+
+There are others methods that are implemented in the Calendar class like:
+	-public static Calendar getInstance()
+	-public static Calendar getInstance(TimeZone zone)
+	-public static Calendar getInstance(Locale aLocale)
+	-public static Calendar getInstance(TimeZone zone, Locale aLocale)
+
+With all this different methods we can have different instances of Calendar. 
+To create a new Calendar object is used the createCalender() method.
+createCalender() method is called in all the methods mentioned above.
+
+Factory method definition: a static method of a class that returns an object of thath class' type
+According to the previous definition of Factory method we can consider that the design pattern used in the calendar class is the Factory design pattern because 
+of the use of the createCalendar() method to creat the Calendar Objects.
+
+

@@ -1,0 +1,21 @@
+PADROES 	7 	5,6	right   
+DESENHO 	7 	9,7	left    
+QUARTO  	6 	4,1	down    
+COZINHA 	7 	12,11	up      
+HONDA   	5 	1,6	downright
+MERCEDES	8 	5,1	right   
+SATURNO 	7 	11,11	left    
+URANO   	5 	1,11	up      
+
+. . . Q M E R C E D E S 
+. . . U . . . . . . . . 
+. . . A . . . . . . . . 
+. . . R . . . . . . . . 
+. . . T . . . . . . . A 
+H . . O P A D R O E S H 
+O O O H N E S E D . . N 
+N . N . . . . . . . . I 
+A . . D . . . . . . . Z 
+R . . . A . . . . . . O 
+U . . . O N R U T A S C 
+. . . . . . . . . . . . 

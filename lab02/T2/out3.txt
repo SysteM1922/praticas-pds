@@ -1,0 +1,20 @@
+PROGRAMMING	11	12,12	upleft  
+REDES      	5 	2,9	upright 
+SEGURANCA  	9 	11,2	left    
+SALA       	4 	9,4	left    
+DETI       	4 	9,10	upleft  
+JOGO       	4 	1,2	downright
+LEANDRO    	7 	12,1	left    
+
+. . . . . O R D N A E L 
+J G A C N A R U G E S . 
+. O N . . . . . . . . . 
+. . G I . A L A S . . . 
+. . . O M S . . . . . . 
+. . . . E M . . . . . . 
+. . . D . I A . . . . . 
+. . E . . . T R . . . . 
+. R . . . . . E G . . . 
+. . . . . . . . D O . . 
+. . . . . . . . . . R . 
+. . . . . . . . . . . P 

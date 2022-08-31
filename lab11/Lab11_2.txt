@@ -1,0 +1,68 @@
+JAVA.IO.InputStream
+
+Definida com classe abstrata, onde esta classe forma a base da hierarquia de classes que lêem input como um fluxo(stream) de bytes.
+
+public abstract class InputStream implements Closeable{
+    ...
+}
+
+A classe InputStream possui um método abstrato para além dos metodos da template
+(1) public abstract int read() throws IOException;
+
+1--> este metodo lê um unsigned byte a partir da input stream e retorna-o como um inteiro entre 0-255. o metodo tb pode retornar -1 se o fim da stream for alcançado
+
+A class BufferedInputStream extends FilterInputStream implementa a classe read() da seguinte forma
+        
+        public synchronized int read() throws IOException {
+           if (pos >= count) {
+                fill();
+                 if (pos >= count)
+                    return -1;
+             }
+             return getBufIfOpen()[pos++] & 0xff;
+       }
+
+
+
+JAVA.IO.Writer
+
+Normalmente definida como uma classe abstrata, onde esta forma a base da hierarquia de classes que escreva o output numa stema de chars
+Definição da classe abstrata Writer
+
+public abstract class Writer implements Appendable, Closeable, Flushable{
+    ...
+}
+
+A classe Writer para além dos métodos já definidos na template ainda possui outros diversos métodos abstratos(3 para ser mais exato)
+Passo a listar --> (1) public abstract void flush() throws IOException;
+                   (2) public abstract void close() throws IOException;
+                   (3) public abstract void write(char[] buf, int offset, int len) throws IOException;
+
+
+1-->Este método força qualquer dado que possa ter sido armazenado em buffer a ser gravado para o dispositivo de saída subjacente.
+
+2-->Este método fecha a stream. Quaisquer recursos internos ou nativos associado com esta steam são libertados. 
+    Qualquer tentativa subsequente de acessar a stream pode dar throw de uma exceção.
+
+3-->This method writes <code>len</code> char from the specified array <code>buf</code> starting at index <code>offset</code> into the array. //não consegui traduzir
+    para português corrente mas a ideia passou.
+
+
+
+JAVA.UTIL.AbstractList
+
+public abstract class AbstractList<E> extends AbstractCollection<E> implements List<E>{
+    ...
+}
+
+Uma implementação básica da maioria dos métodos na interface List para facilitar a criação de uma List com base em uma estrutura de dados de acesso aleatório.
+
+public abstract E get(int index); Este metodo abstrato serve para retornar elementos numa posição especifica de uma lista
+
+A classe SubList<E> extends AbstractList implementa o get(int index) acima mencionado da seguinta maneira:
+
+            public E get(int index) {
+                rangeCheck(index);
+                checkForComodification();
+                return l.get(index+offset);
+            }
